@@ -1,4 +1,12 @@
 SELECT *
+FROM PortfolioProject..CovidVaccinations
+ORDER BY 3,4
+
+SELECT *
+FROM PortfolioProject..CovidDeaths
+ORDER BY 3,4
+
+SELECT *
 FROM covidDeaths
 where CONTINENT is not NULL 
 order by 3, 4
@@ -33,7 +41,6 @@ WHERE location like '%States%'
 GROUP BY Location, population
 order by PercentpopulationInfected desc
 
-
 --LET'S BREAK EVERYTHING BY CONTINENT 
 
 --SHOWING COUNTRIES WITH HIGHEST DEATH COUNT PER POPULATION
@@ -43,6 +50,7 @@ FROM CovidDeaths
 WHERE CONTINENT is NULL
 GROUP BY location 
 order by TotalDeathCount desc
+
 
 --LET'S BREAK EVERYTHING DOWN BY CONTINENT
 -- SHOWING CONTINENTS WITH THE HIGHEST DEATH COUNT PER POPULATION
@@ -101,7 +109,3 @@ Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinatio
 
 	SELECT *
 	FROM Percentpopulationvaccinated
-
-
-
-
